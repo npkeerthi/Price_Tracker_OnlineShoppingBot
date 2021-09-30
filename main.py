@@ -25,10 +25,17 @@ else:
   price=float(pp_no_symbol)
   print(price)
 
-company=soup.find(class_="G6XhRU").getText()
+try:
+    company=soup.find(class_="G6XhRU").getText()
+except:
+    print("No Company Name")
 product=soup.find(class_="B_NuCI").getText()
-produtname=company+product
-print(produtname)
+try:
+    produtname=company+product
+except:
+    produtname=product
+finally:
+    print(produtname)
 
 import smtplib
 
