@@ -44,7 +44,13 @@ mymail="yourmail@gmail.com"
 paswd="yourmailpassword"
 tomail="recipient@gmail.com"
 
-Buy_Price=1800   #set target
+
+press=input("(Could skip) Press 2 to type your expected price and get notified when it reaches the range:")
+if press=="2":
+    Buy_Price=int(input("Your expected Price (FLipkart): "))
+else:
+    Buy_Price=1800
+  #set target
 
 if price < Buy_Price:
     msg=f"{produtname} is now at ₹{price}"
